@@ -1,0 +1,15 @@
+<div class="wrapper" >
+  <p>Wybierz 2 daty, a następnie kliknij przycisk POBIERZ, aby pobrać kursy złota z podanego przedziału czasowego.</p>
+  <div class="error" *ngIf="!isValid">{{errorMessage}}</div>
+  <div class="sample-wrapper date-picker-wrapper">
+      <div class="data-pick">
+        <igx-datePicker [(ngModel)]="cal1"></igx-datePicker>
+      </div>
+      <div class="data-pick">
+          <igx-datePicker [(ngModel)]="cal2"></igx-datePicker>
+      </div>
+      <button (click)="onSubmit()">pobierz </button>
+    </div>
+</div>
+
+

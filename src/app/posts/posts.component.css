@@ -1,0 +1,92 @@
+.wrapper {
+  position: absolute;
+  padding: 20px;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70vw;
+  min-width: 300px;
+  background-color: #ffffff;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 70px 1fr 50px 50px 50px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  color: #666666;
+  box-shadow: 7px 6px 16px -1px rgba(50,50,50,0.75);
+}
+
+ul {
+  width: 100%;
+  border: 1px solid #666666;
+}
+
+li {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+li:nth-child(2n) {
+  background-color: #eeeeee;
+}
+
+li div {
+  color: #666666;
+}
+
+li div:first-child {
+  border-right: 1px solid #666;
+}
+
+a {
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #08724A;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #054018;
+}
+
+button {
+  width: 40%;
+  padding: 5px 0;
+  background-color: #08724A;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  transition: .1s all;
+  margin: 5px auto;
+}
+
+button:hover {
+  background-color: #076139;
+  box-shadow: 0 0 10px 4px #aaaaaa;
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 630px) {
+  button {
+    width: 70%;
+  }
+}
+
+@media (max-width: 420px) {
+  button {
+    width: 100%;
+  }
+  .wrapper {
+    grid-template-rows: 70px 1fr 80px 80px 80px;
+  }
+}

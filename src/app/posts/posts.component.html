@@ -1,0 +1,20 @@
+<div *ngIf="postList" class="wrapper">
+  <a class="back-link" routerLink="/calendar" routerLinkActive="active" >Powrot do wyboru daty</a>
+  <ul class="post-list">
+    <li *ngFor="let post of postList" >
+        <div class="data">
+          {{post.data}}
+        </div>
+        <div class="cena">
+          {{post.cena}} za 1g złota
+        </div>
+    </li>
+  </ul>
+  <div class="max">Najwyższy kurs: {{setMax().cena + ' za 1g złota, dnia: ' + setMax().data}}</div>
+  <div class="min">Najniższy kurs: {{setMin().cena + ' za 1g złota, dnia: ' + setMax().cena}}</div>
+  <div class="mediana">Mediana: {{setMedian()}} za 1g złota</div>
+  <button (click)="sortByDateAsc()" >Sortuj od najwyższej daty</button>
+  <button (click)="sortByDateDesc()" >Sortuj od najniższej daty</button>
+  <button (click)="sortByPriceAsc()" >Sortuj od najwyższej ceny</button>
+  <button (click)="sortByPriceDesc()" >Sortuj od najniższej ceny</button>
+</div>
